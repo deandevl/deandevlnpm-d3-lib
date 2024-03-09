@@ -1,0 +1,33 @@
+{
+  "name": "@deandevlnpm/d3-lib",
+  "version": "0.0.2",
+  "description": "A collection of importable modules for creating various types of d3 charts",
+  "repository": "https://github.com/deandevl/deandevlnpm-d3-lib",
+  "author": "Rick Dean <deanr3@bardstown.com>",
+  "license": "MIT",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/d3-lib.umd.cjs",
+  "module": "./dist/d3-lib.js",
+  "exports": {
+    ".": {
+      "import": "./dist/d3-lib.js",
+      "require": "./dist/d3-lib.umd.cjs"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "login": "npm login",
+    "publish_library": "npm publish --access public"
+  },
+  "devDependencies": {
+    "vite": "^5.0.8"
+  },
+  "dependencies": {
+    "d3": "^7.8.5"
+  }
+}

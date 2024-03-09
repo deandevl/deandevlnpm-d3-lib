@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="An HTML Page; Created: 02/17/2024">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Rick Dean">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Demo of d3_heatmap function</title>
+  </head>
+  <body>
+		<label for="scale">Select a scale</label>
+		<select id="scale" name="scale">
+			<option value="linear">Linear</option>
+			<option value="quantize">Quantize</option>
+			<option value="quantile" selected>Quantile</option>
+			<option value="threshold">Threshold</option>
+		</select>
+
+		<label for="color">Select a color</label>
+		<select id="color" name="color">
+			<option value="default" selected>Default</option>
+			<option value="orange">Orange</option>
+			<option value="purple">Purple</option>
+			<option value="blue">Blue</option>
+			<option value="green">Green</option>
+		</select>
+
+		<div id="chart"></div>
+    <script type="module" src="./demo.js"></script>
+  </body>
+</html>

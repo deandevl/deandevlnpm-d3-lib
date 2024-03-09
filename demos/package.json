@@ -1,0 +1,21 @@
+{
+  "name": "demos",
+  "version": "1.0.0",
+  "description": "Demos of d3 charting from @deandevlnpm/d3-charts",
+  "scripts": {
+    "dev": "vite"
+  },
+  "keywords": [
+    "d3",
+    "HTML"
+  ],
+  "author": "Rick Dean",
+  "license": "MIT",
+  "dependencies": {
+    "@deandevlnpm/d3-lib": "^0.0.1",
+    "d3": "^7.8.5"
+  },
+  "devDependencies": {
+    "vite": "^5.1.1"
+  }
+}
