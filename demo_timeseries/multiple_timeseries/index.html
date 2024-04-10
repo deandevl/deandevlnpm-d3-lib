@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="An HTML Page; Created: 05/24/1949">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Rick Dean">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Demo of d3_timeseries function with multiple data</title>
+  </head>
+  <body>
+    <div id="multiple_timeseries_chart"></div>
+
+    <fieldset>
+      <legend>Choose a variable</legend>
+      <div>
+        <label>
+          <input class="vars_check" type="checkbox" value="XLY">
+          Consumer Discretionary Select Sector(XLY)
+        </label>
+        <label>
+          <input class="vars_check" type="checkbox" value="XLP">
+          Consumer Staples Select Sector SPDR Fund(XLP)
+        </label>
+        <label>
+          <input class="vars_check" type="checkbox" value="XLV">
+          Health Care Select Sector SPDR Fund(XLV)
+        </label>
+      </div>
+      <div>
+        <button id="submit_button" type="submit">Submit variables</button>
+      </div>
+    </fieldset>
+    
+    <fieldset>
+      <legend>Choose a tracking variable</legend>
+      <select id="select_track">
+        <option value="None" selected>None</option>
+        <option value="XLY">XLY</option>
+        <option value="XLP">XLP</option>
+        <option value="XLV">XLV</option>
+      </select>
+    </fieldset>
+
+		
+
+    <script type="module" src="./demo.js"></script>
+  </body>
+</html>

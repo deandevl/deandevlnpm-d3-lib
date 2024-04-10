@@ -1,0 +1,29 @@
+#vars_form {
+  width: 300px;
+  margin: 0,auto;
+  font-family: Verdana, serif;
+}
+
+#vars_form fieldset {
+  height: 120px;
+  background: cyan;
+  border: solid blue;
+}
+
+#vars_form fieldset legend {
+  padding: 5px;
+  background: cyan;
+  color: blue;
+  border: solid blue;
+}
+
+#vars_form fieldset div {
+  display: flex;
+  flex-direction: column;
+  height: 60px;
+}
+
+button {
+  background: cyan;
+  color: blue;
+}

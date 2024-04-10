@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Demo of d3_scatter function; Created: 02/10/2024">
+    <meta name="keywords" content="d3, HTML, CSS, JavaScript">
+    <meta name="author" content="Rick Dean">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="./style.css"/>
+    <title>Demo of app_scatter function</title>
+  </head>
+  <body>
+    <form id="vars_form">
+      <fieldset>
+        <legend>Choose a variable</legend>
+        <div>
+          <label>
+            <input class="vars_check" type="checkbox" value="TV">
+            TV
+          </label>
+          <label>
+            <input class="vars_check" type="checkbox" value="Radio">
+            Radio
+          </label>
+          <label>
+            <input class="vars_check" type="checkbox" value="Newspaper">
+            Newspaper
+          </label>
+        </div>
+        <div>
+          <button id="submit_button" type="submit">Submit variables</button>
+        </div>
+      </fieldset>
+    </form>
+    <div id="scatter_chart"></div>
+    <script type="module" src="./demo.js"></script>
+  </body>
+</html>
