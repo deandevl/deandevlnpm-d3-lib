@@ -7,6 +7,7 @@
 import { csv } from 'd3-fetch'
 import { select } from 'd3-selection';
 import {utcYears, utcMonths, timeMonth} from 'd3-time';
+import { Dimensions } from '../../src/helpers';
 import { app_timeseries } from '../../src/app_timeseries';
 
 const draw_chart = async function(){
@@ -17,9 +18,10 @@ const draw_chart = async function(){
 			close: +d.close
 		}
   })
-
+  const dimensions = new Dimensions(1000,700,30,40,50,80)
   const timeseries_chart = app_timeseries()
   .init('timeseries_chart', data)
+  .set_dimes(dimensions)
   .set_variable_x('date')
   .set_variables_y(['close'])
   .set_x_ticks_format('%Y-%b')
@@ -57,23 +59,6 @@ const draw_chart = async function(){
     )
     .draw_timeseries();
   })
-  
-  // define the options for 'd3_histogram'
- /* let options = {
-    chart_id: 'chart',
-    dataset: data,
-    variable_x: 'date',
-    variables_y: ['close'],
-    y_track: 'close',
-    //x_axis_ticks: d3.utcYears(new Date('2007-01-01'),new Date('2014-01-01'),1),
-    //x_axis_ticks: d3.utcMonths(new Date('2007-01-01'),new Date('2014-01-01'),6),
-    //x_axis_min_max:  [new Date('2008-01-01'), new Date('2008-12-31')],
-    x_ticks_format: '%Y-%b',
-    title: 'Stock Market Close Prices',
-    x_title: 'Date',
-    y_title: 'Close Price'
-  }
-  d3_timeseries(options)*/
 }
 
 draw_chart()

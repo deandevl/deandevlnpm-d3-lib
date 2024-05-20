@@ -54,6 +54,6 @@ const draw_chart = async function(){
       .draw_scatter();
     }
   })
-}
+};
 
-draw_chart()
+draw_chart();

@@ -1,5 +1,5 @@
 import { select } from 'd3-selection';
-import { map as _map, sum as _sum, forEach as _forEach, pick as _pick } from 'lodash';
+import { map as _map, sum as _sum, forEach as _forEach, pick as _pick, clone as _clone } from 'lodash';
 /**
  * Creates a svg table based on d3 that can easily be made interactive.
  * @author Rick Dean
@@ -170,6 +170,10 @@ const app_table = function(){
     if(typeof cell_widths === 'undefined'){
       cell_widths = _map(variables, (d) => {return 120;})
     }
+    if(typeof headings === 'undefined'){
+      headings = _clone(variables);
+    }
+
     const offsets = [];
     let running_sum = 0;
     _forEach(cell_widths, (d) => {
@@ -204,8 +208,9 @@ const app_table = function(){
      if(typeof title !== 'undefined'){
       table_g
       .append('text')
-      .attr('x', svg_width/3)
+      .attr('x', 20)
       .attr('y', title_y)
+      .style('text-anchor', 'start')
       .style('font-weight', 'bold')
       .style('font-size', '20px')
       .style('font-family', 'Verdana')
@@ -290,12 +295,12 @@ const app_table = function(){
     })
     .join('text')
     .attr('x', (d,i) => {
-      return offsets[i];
+      return offsets[i] + 5;
     })
-    .attr('dx', (d,i) => cell_widths[i]/2)
-    .attr('dy', -cell_height/2)
+  //  .attr('dx', (d,i) => cell_widths[i])
+    .attr('dy', -cell_height/2 + 4)
     .style('fill', cell_fill)
-    .style('text-anchor', 'middle')
+    .style('font-family', 'Verdana')
     .text(d => d[1])
 
     return this;

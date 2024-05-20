@@ -8,7 +8,7 @@ import {csv} from 'd3-fetch';
 import { app_table } from "../src/app_table";
 
 const draw_table = async function(){
-  const data = await csv('../data/population.csv')
+  const data = await csv('../data/population.csv');
   const variables = [
     'State',
     'Under 5 Years',
@@ -18,7 +18,7 @@ const draw_table = async function(){
     '25 to 44 Years',
     '45 to 64 Years',
     '65 Years and Over'
-  ]
+  ];
   const headings = [
     'State',
     'Under 5',
@@ -28,7 +28,7 @@ const draw_table = async function(){
     '25 to 44',
     '45 to 64',
     'Over 64'
-  ]
+  ];
 
   app_table()
   .init('table_div', data)
@@ -40,7 +40,7 @@ const draw_table = async function(){
   .set_cell_backgrd('#66FFFF')
   .set_cell_fill('black')
   .set_cell_stroke('white')
-  .draw_table() 
-}
+  .draw_table();
+};
 
-draw_table()
+draw_table();

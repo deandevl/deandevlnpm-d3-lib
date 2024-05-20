@@ -1,6 +1,6 @@
 {
   "name": "@deandevlnpm/d3-lib",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A collection of importable modules for creating various types of d3 charts",
   "repository": "https://github.com/deandevl/deandevlnpm-d3-lib",
   "author": "Rick Dean <deanr3@bardstown.com>",
